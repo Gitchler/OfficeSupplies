@@ -5,7 +5,6 @@
  * @author Gitchler and G0dOfGit
  * @version 2/1/2024
  */
-import java.util.Scanner;
 
 public class File
 {
@@ -25,25 +24,87 @@ public class File
         this.click = false;
     }
     
-    public static boolean click()
+    public static boolean clickPen()
     {
         click = true;
         return click;
     }
     
-    public static void writeHeader()
+    public static void writeName(String nameA)
     {
         if (click == true)
         {
-            Scanner in = new Scanner(System.in);
-            System.out.println("Name is: ");
-            name = in.nextLine();
-            System.out.println("Date is: ");
-            date = in.nextLine();
-            System.out.println("------------ Header -------------");
-            System.out.println(name);
-            System.out.println(date);
+            name = nameA;
+        }
+        else
+        {
+            name = "";
         }
     }
-
+    
+    public static void writeDate(String dateA)
+    {
+        if (click == true)
+        {
+            date = dateA;
+        }
+        else
+        {
+            date = "";
+        }
+    }
+    
+    public static void writeTitle(String titleA)
+    {
+        if (click == true)
+        {
+            title = titleA;
+        }
+        else
+        {
+            title = "";
+        }
+    }
+    
+    public void writeBody(String bodyA)
+    {
+        if (click == true)
+        {
+            body = bodyA;
+        }
+        else
+        {
+            body = "";
+        }
+    }
+    
+    public static String getName()
+    {
+        return name;
+    }
+    
+    public static String getDate()
+    {
+        return date;
+    }
+    
+    public static String getTitle()
+    {
+        return title;
+    }
+    
+    public static String getBody()
+    {
+        return body;
+    }
+    
+    public static void viewFile()
+    {
+        System.out.println(name);
+        System.out.println(date);
+        System.out.println();
+        System.out.println(title);
+        System.out.println();
+        System.out.println(body);
+    }
 }
