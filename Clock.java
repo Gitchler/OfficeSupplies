@@ -42,6 +42,5 @@ public class Clock
      */
     public static void replaceBatt()
     {
-    }
-    
+    }    
 }
