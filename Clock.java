@@ -42,5 +42,10 @@ public class Clock
      */
     public static void replaceBatt()
     {
+<<<<<<< HEAD
     }    
+=======
+    }
+    
+>>>>>>> 9c1476a (Established the framework for the clock class)
 }
