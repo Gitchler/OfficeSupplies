@@ -14,20 +14,36 @@ public class File
     private static String title;
     private static String body;
     private static boolean click;
+    private static String answer;
     
     public File()
     {
-        this.name = "";
-        this.date = "";
-        this.title = "";
-        this.body = "";
-        this.click = false;
+        name = "";
+        date = "";
+        title = "";
+        body = "";
+        click = false;
     }
     
     public static boolean clickPen()
     {
         click = true;
         return click;
+    }
+    
+    public static String penStatus()
+    {
+        answer = "";
+        if (click == true)
+        {
+            answer = "Pen clicked -- ready to write.";
+            return answer;
+        }
+        else
+        {
+            answer = "Pen not clicked -- not ready to write.";
+            return answer;
+        }
     }
     
     public static void writeName(String nameA)
