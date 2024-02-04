@@ -23,51 +23,54 @@ public class Portfolio
     {
         Portfolio = new ArrayList<Stock>();
     }
-    
-    public void accessMarket()
+        
+    public String fullWatchlist(StockMarket Market)
     {
-        ArrayList<Stock> Market = market.getStocks();
-    }
-    
-    public Stock fullWatchlist()
-    {
-        for (Stock stock : Market)
+        ArrayList<Stock> thisMarket = new ArrayList<Stock>();
+        thisMarket = Market.getStocks();
+        for (Stock stock : thisMarket)
         {
-            return stock;
+            System.out.println(stock.getTicker());
         }
         return null;
     }
     
-    public Stock sectorScreener(String thisSector)
+    public String sectorScreener(String thisSector, StockMarket Market)
     {
-        for (Stock stock : Market)
+        ArrayList<Stock> thisMarket = new ArrayList<Stock>();
+        thisMarket = Market.getStocks();
+        for (Stock stock : thisMarket)
         {
-            if (stock.getSector() == thisSector)
+            if (stock.getSector().equals(thisSector))
             {
-                return stock;
+                System.out.println(stock.getTicker());
             }
         }
         return null;
     }
     
-    public Stock valueScreener(double maxPE)
+    public String valueScreener(double maxPE, StockMarket Market)
     {
-        for (Stock stock : Market)
+        ArrayList<Stock> thisMarket = new ArrayList<Stock>();
+        thisMarket = Market.getStocks();
+        for (Stock stock : thisMarket)
         {
             if (stock.getPE() <= maxPE)
             {
-                return stock;
+                 System.out.println(stock.getTicker());
             }
         }
         return null;
     }
-    public Stock divScreener(double minDivYield)
+    public String divScreener(double minDivYield, StockMarket Market)
     {
-        for (Stock stock : Market)
+        ArrayList<Stock> thisMarket = new ArrayList<Stock>();
+        thisMarket = Market.getStocks();
+        for (Stock stock : thisMarket)
         {
             if (stock.getDivYield() >= minDivYield)
             {
-                return stock;
+                System.out.println(stock.getTicker());
             }
         }
         return null;
@@ -76,10 +79,12 @@ public class Portfolio
     {
         return liquidity;
     }
-    public void buy(String tickerToBuy, double quantity)
+    public void buy(String tickerToBuy, double quantity, StockMarket Market)
     {
         Stock toBeBought = null;
-        for (Stock stock : Market)
+        ArrayList<Stock> thisMarket = new ArrayList<Stock>();
+        thisMarket = Market.getStocks();
+        for (Stock stock : thisMarket)
         {
             if (stock.getTicker().equals(tickerToBuy))
             {

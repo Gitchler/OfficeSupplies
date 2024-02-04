@@ -17,6 +17,7 @@ public class PortfolioTester
         System.out.println("Initalizing a portfolio...");
         System.out.println("Portfolio initialized: TheTradingTavern");
         System.out.println("Liquidity available: " + TheTradingTavern.getLiquidity());
+        
         StockMarket BigStock = new StockMarket();
         
         System.out.println("----------------");
@@ -43,12 +44,13 @@ public class PortfolioTester
         Stock MCD = new Stock("MCD", "Consumer Discretionary", 296.07, 2.25, 11.35);
         BigStock.marketMaking(MCD);
         
-        Stock LMT = new Stock("LMT", "Indsutrials", 428.14, 2.96, 27.56);
+        Stock LMT = new Stock("LMT", "Industrials", 428.14, 2.96, 27.56);
         BigStock.marketMaking(LMT);
         Stock BA = new Stock("BA", "Industrials", 209.06, 0, -3.66);
         BigStock.marketMaking(BA);
         Stock RTX = new Stock("RTX", "Industrials", 92.94, 2.57, 41.32);
-        
+        BigStock.marketMaking(RTX);
+
         Stock GS = new Stock("GS", "Financials", 381.80, 2.84, 16.96);
         BigStock.marketMaking(GS);
         Stock JPM = new Stock("JPM", "Financials", 173.30, 2.40, 10.77);
@@ -60,19 +62,20 @@ public class PortfolioTester
         
         BigStock.viewMarket();
         
+        
         System.out.println("Terminal commands:");
         System.out.println("To buy any stock, enter b");
-        System.out.println("To screen by Price To Earnings ratio, enter s-pe");
-        System.out.println("To screen by Dividend Yield, enter s-y");
-        System.out.println("To screen by sector, enter s-s");
-        System.out.println("To view liquidity, enter l");
-        System.out.println("To view portfolio, enter p");
+        System.out.println("To screen by Price To Earnings ratio, enter PE Screen");
+        System.out.println("To screen by Dividend Yield, enter Yield Screen");
+        System.out.println("To screen by sector, enter Sector Screen");
+        System.out.println("To view liquidity, enter Liquidity");
+        System.out.println("To view portfolio, enter Portfolio");
         System.out.println("To quit, enter q");
         
         System.out.println("----------------");
         
         Scanner in = new Scanner(System.in);
-        String input = in.next();
+        String input = in.nextLine();
         
         while (!input.equals("q"))
         {
@@ -84,38 +87,38 @@ public class PortfolioTester
                 System.out.println("Enter quantity of equities to purchase (Ex: 3)");
                 Scanner QuantityIn = new Scanner(System.in);
                 Double inQuantity = QuantityIn.nextDouble();
-                TheTradingTavern.buy(inTicker, inQuantity);
+                TheTradingTavern.buy(inTicker, inQuantity, BigStock);
             }
-            else if (input.equals("s-pe"))
+            else if (input.equals("PE Screen"))
             {
                 System.out.println("Enter maximum P/E ratio");
                 Scanner inPE = new Scanner(System.in);
                 Double PEMax = in.nextDouble();
-                TheTradingTavern.valueScreener(PEMax);
+                TheTradingTavern.valueScreener(PEMax, BigStock);
             }
-            else if (input.equals("s-y"))
+            else if (input.equals("Yield Screen"))
             {
                 System.out.println("Enter minumum dividend yield");
                 Scanner inDiv = new Scanner(System.in);
                 Double DivMin = in.nextDouble();
-                TheTradingTavern.divScreener(DivMin);
+                TheTradingTavern.divScreener(DivMin, BigStock);
             }
-            else if (input.equals("s-2"))
+            else if (input.equals("Sector Screen"))
             {
                 System.out.println("Enter desired sector - available sectors: Information Technology, Consumer Discretionary, Financials, Industrials");
                 Scanner inSector = new Scanner(System.in);
-                String desiredSector = in.next();
-                TheTradingTavern.sectorScreener(desiredSector);
+                String desiredSector = in.nextLine();
+                System.out.println(TheTradingTavern.sectorScreener(desiredSector, BigStock));
             }
-            else if (input.equals("l"))
+            else if (input.equals("Liquidity"))
             {
                 System.out.println(TheTradingTavern.getLiquidity());
             }
-            else if (input.equals("p"))
+            else if (input.equals("Portfolio"))
             {
                 TheTradingTavern.viewPortfolio();
             }
-            input = in.next();
+            input = in.nextLine();
         }
     }
 }
