@@ -9,25 +9,55 @@
 public class File
 {
     // instance variables - replace the example below with your own
+    private static String company;
     private static String name;
     private static String date;
     private static String title;
     private static String body;
     private static boolean click;
+    private static String answer;
     
     public File()
     {
-        this.name = "";
-        this.date = "";
-        this.title = "";
-        this.body = "";
-        this.click = false;
+        company = "";
+        name = "";
+        date = "";
+        title = "";
+        body = "";
+        click = false;
     }
     
     public static boolean clickPen()
     {
         click = true;
         return click;
+    }
+    
+    public static String penStatus()
+    {
+        answer = "";
+        if (click == true)
+        {
+            answer = "Pen clicked -- ready to write.";
+            return answer;
+        }
+        else
+        {
+            answer = "Pen not clicked -- not ready to write.";
+            return answer;
+        }
+    }
+    
+    public static void writeCompany(String companyA)
+    {
+        if (click == true)
+        {
+            company = companyA;
+        }
+        else
+        {
+            company = "";
+        }
     }
     
     public static void writeName(String nameA)
@@ -78,6 +108,11 @@ public class File
         }
     }
     
+    public static String getCompany()
+    {
+        return company;
+    }
+    
     public static String getName()
     {
         return name;
@@ -100,6 +135,7 @@ public class File
     
     public static void viewFile()
     {
+        System.out.println(company);
         System.out.println(name);
         System.out.println(date);
         System.out.println();
