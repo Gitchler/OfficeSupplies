@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=OfficeSupplies
 dependency1.to=File
 dependency1.type=UsesDependency
@@ -12,12 +13,50 @@ package.divider.horizontal=0.6
 package.divider.vertical=0.7988929889298892
 package.editor.height=426
 package.editor.width=683
+=======
+dependency1.from=PortfolioTester
+dependency1.to=Portfolio
+dependency1.type=UsesDependency
+dependency2.from=PortfolioTester
+dependency2.to=StockMarket
+dependency2.type=UsesDependency
+dependency3.from=PortfolioTester
+dependency3.to=Stock
+dependency3.type=UsesDependency
+dependency4.from=Portfolio
+dependency4.to=Stock
+dependency4.type=UsesDependency
+dependency5.from=Portfolio
+dependency5.to=StockMarket
+dependency5.type=UsesDependency
+dependency6.from=StockMarket
+dependency6.to=Stock
+dependency6.type=UsesDependency
+dependency7.from=OfficeSupplies
+dependency7.to=File
+dependency7.type=UsesDependency
+editor.fx.0.height=722
+editor.fx.0.width=800
+editor.fx.0.x=638
+editor.fx.0.y=117
+objectbench.height=101
+objectbench.width=461
+package.divider.horizontal=0.6
+package.divider.vertical=0.7985074626865671
+package.editor.height=421
+package.editor.width=684
+>>>>>>> Gitchler
 package.editor.x=225
 package.editor.y=151
 package.frame.height=600
 package.frame.width=800
+<<<<<<< HEAD
 package.numDependencies=1
 package.numTargets=3
+=======
+package.numDependencies=7
+package.numTargets=6
+>>>>>>> Gitchler
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -27,6 +66,7 @@ readme.width=48
 readme.x=10
 readme.y=10
 target1.height=70
+<<<<<<< HEAD
 target1.name=File
 target1.showInterface=false
 target1.type=ClassTarget
@@ -46,3 +86,46 @@ target3.type=TextTarget
 target3.width=120
 target3.x=260
 target3.y=20
+=======
+target1.name=PortfolioTester
+target1.showInterface=false
+target1.type=ClassTarget
+target1.width=120
+target1.x=10
+target1.y=210
+target2.height=70
+target2.name=Portfolio
+target2.showInterface=false
+target2.type=ClassTarget
+target2.width=120
+target2.x=140
+target2.y=210
+target3.height=70
+target3.name=StockMarket
+target3.showInterface=false
+target3.type=ClassTarget
+target3.width=120
+target3.x=10
+target3.y=290
+target4.height=70
+target4.name=File
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=120
+target4.x=70
+target4.y=10
+target5.height=70
+target5.name=OfficeSupplies
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=120
+target5.x=80
+target5.y=130
+target6.height=70
+target6.name=Stock
+target6.showInterface=false
+target6.type=ClassTarget
+target6.width=120
+target6.x=140
+target6.y=290
+>>>>>>> Gitchler
