@@ -12,7 +12,8 @@ public class OfficeSupplies
     {
         
         //FILE CLASS TESTER
-        System.out.println("Testing the File class....");
+        System.out.println("------------- Testing the File class -------------");
+        System.out.println();
         System.out.println("Initializing a new file...");
         File a = new File();
         System.out.println("Clicking pen to write...");
@@ -48,5 +49,29 @@ public class OfficeSupplies
         System.out.println("Checking the whole file at once...");
         System.out.println();
         a.viewFile();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        
+        //CLOCK CLASS TESTER
+        
+        System.out.println("------------- Testing the Clock class -------------");
+        System.out.println();
+        System.out.println("Initializing a default clock (constructor)...");
+        Clock b = new Clock();
+        System.out.println("Getting time for the default clock...");
+        System.out.println(b.getTime());
+        System.out.println("Setting time as 4 hr, 23 min on the default clock...");
+        b.setTime("4", "23");
+        System.out.println("Getting the new time on the default clock...");
+        System.out.println(b.getTime());
+        System.out.println();
+        System.out.println("Making a new clock (overloaded constructor and input 6 hr, 45 min)...");
+        Clock c = new Clock("6", "45");
+        System.out.println("Getting the time on the clock...");
+        System.out.println(c.getTime());
     }
 }
