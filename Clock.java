@@ -1,6 +1,8 @@
 
 /**
- * Write a description of class Clock here.
+ * The Clock class allows the user to set and tell time.
+ *
+ *"Time is money" - Benjamin Franklin.
  *
  * @author Gitchler and the G0dOfGit
  * @version 2/5/2024
@@ -19,6 +21,9 @@ public class Clock
         minutes = "00";
     }
     
+    /**
+     * Overloaded clock constructor
+     */
     public Clock(String hoursA, String minutesA)
     {
         hours = hoursA;
@@ -26,10 +31,8 @@ public class Clock
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * The setTime method allows the user to set a time on the clock
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
      */
     public static void setTime(String hoursB, String minutesB)
     {
@@ -37,6 +40,10 @@ public class Clock
         minutes = minutesB;
     }
     
+    /**
+     * The getTime method returns the time displayed on the clock
+     * @return time the time set on the clock
+     */
     public static String getTime()
     {
         String time = (hours + ":" + minutes);

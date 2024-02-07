@@ -12,11 +12,8 @@ public class OfficeSupplies
     {
         
         //FILE CLASS TESTER
-<<<<<<< HEAD
         System.out.println("------------- Testing the File class -------------");
-=======
-        System.out.println("------------------ Testing the File class ------------------");
->>>>>>> Gitchler
+        System.out.println();
         System.out.println();
         System.out.println("Initializing a new file...");
         File a = new File();
@@ -60,20 +57,15 @@ public class OfficeSupplies
         System.out.println();
         System.out.println();
         
-<<<<<<< HEAD
         //CLOCK CLASS TESTER
         
         System.out.println("------------- Testing the Clock class -------------");
-=======
-        //CLOCK
-        System.out.println("------------------ Testing the Clock class ------------------");
->>>>>>> Gitchler
+        System.out.println();
         System.out.println();
         System.out.println("Initializing a default clock (constructor)...");
         Clock b = new Clock();
         System.out.println("Getting time for the default clock...");
         System.out.println(b.getTime());
-<<<<<<< HEAD
         System.out.println("Setting time as 4 hr, 23 min on the default clock...");
         b.setTime("4", "23");
         System.out.println("Getting the new time on the default clock...");
@@ -82,16 +74,14 @@ public class OfficeSupplies
         System.out.println("Making a new clock (overloaded constructor and input 6 hr, 45 min)...");
         Clock c = new Clock("6", "45");
         System.out.println("Getting the time on the clock...");
-=======
         System.out.println("Setting time on the default clock (input 2 hr, 21 min)...");
         b.setTime("2", "21");
         System.out.println("Getting the new time...");
         System.out.println(b.getTime());
         System.out.println();
         System.out.println("Making a new clock (overloaded constructor w/ input 6 hr, 45 min)...");
-        Clock c = new Clock("6", "45");
+        Clock d = new Clock("6", "45");
         System.out.println("Getting the time...");
->>>>>>> Gitchler
-        System.out.println(c.getTime());
+        System.out.println(d.getTime());
     }
 }
